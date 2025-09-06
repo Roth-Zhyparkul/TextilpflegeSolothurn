@@ -12,24 +12,31 @@ body {
     padding: 0 20px;
 }
 
-.main-header {
-    background: #ffffff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    position: sticky;
-    top: 0;
-    z-index: 10;
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 54px;
+    width: auto;
+    margin-right: 14px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(23,157,224,0.05);
+}
+
+.logo-text {
     font-size: 1.6em;
     font-weight: bold;
     color: #179de0;
-    padding: 18px 0;
-    display: inline-block;
-}
-
-nav {
-    float: right;
+    letter-spacing: 1px;
 }
 
 nav ul {
