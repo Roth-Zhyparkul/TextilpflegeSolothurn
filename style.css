@@ -24,12 +24,15 @@ body {
 }
 
 .logo-img {
-    height: 54px;
+    height: 54px;       /* fixed height */
+    max-width: 180px;   /* adjust as needed */
     width: auto;
     margin-right: 14px;
     border-radius: 10px;
     background: #fff;
     box-shadow: 0 2px 8px rgba(23,157,224,0.05);
+    object-fit: contain; /* ensures aspect ratio is preserved */
+    display: block;
 }
 
 .logo-text {
