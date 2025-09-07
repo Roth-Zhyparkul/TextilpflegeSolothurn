@@ -135,7 +135,7 @@ nav ul li a:hover {
   transform: translateY(-4px) scale(1.03);
 }
 .card .icon {
-  height: 48px;
+  height: 180px;
   margin-bottom: 18px;
   opacity: 0.85;
 }
@@ -234,31 +234,32 @@ nav ul li a:hover {
 }
 
 .innovation-item {
-  background: #f5f7f6; /* Light pale green/gray for cards */
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(111, 175, 114, 0.15); /* subtle green shadow */
-  padding: 24px;
-  width: 280px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background: #fff7f7;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(211,47,47,0.09);
+  padding: 32px 24px;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.innovation-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(111, 175, 114, 0.25);
+  flex: 1 1 240px;
+  max-width: 260px;
+  min-width: 210px;
+  margin: 12px 0;
+  transition: box-shadow 0.2s, transform 0.2s;
 }
 
 .innovation-item img {
   width: 100%;
-  max-width: 200px;
-  height: 130px;
+  max-width: 280px;  /* Make images bigger than before */
+  height: 180px;     /* Adjust height proportionally */
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 18px;
-  box-shadow: 0 2px 16px rgba(111, 175, 114, 0.15);
+  box-shadow: 0 2px 16px rgba(111, 175, 114, 0.15); /* Adjust color if needed */
+  transition: transform 0.3s ease;   /* Smooth transition */
+  cursor: pointer;  /* Optional: show pointer on hover */
+}
+
+.innovation-item:hover img {
+  transform: scale(1.05);  /* Slightly zoom in on hover */
 }
 
 .innovation-item h3 {
