@@ -211,20 +211,17 @@ nav ul li a:hover {
   transform: scale(1.03);
   box-shadow: 0 6px 18px rgba(211,47,47,0.18);
 }
-.innovation-section {
-  background-color: #fafbf9; /* Very light natural tone background */
-  padding: 60px 20px;
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-  color: #444444; /* Dark gray text */
-}
 
-.innovation-title {
-  color: #6FAF72; /* Soft green accent */
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin-bottom: 40px;
-  letter-spacing: 1.2px;
+.innovation-section {
+  background: #fff;
+  margin: 44px 0;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(211,47,47,0.07);
+  padding: 40px 0;
+}
+.innovation-section h2 {
+  text-align: center;
+  margin-bottom: 28px;
 }
 
 .innovation-items {
@@ -245,6 +242,7 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -264,32 +262,13 @@ nav ul li a:hover {
 }
 
 .innovation-item h3 {
-  color: #4CAF50; /* Slightly stronger green for headings */
-  font-size: 1.3rem;
+  color: #d32f2f;
   margin: 0 0 12px 0;
-  font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .innovation-item p {
-  font-size: 1rem;
-  color: #444444;
-  line-height: 1.6;
-  margin: 0;
-  text-align: center;
-}
-
-.innovation-description {
-  max-width: 740px;
-  margin: 0 auto;
-  background-color: #e9ece8; /* Light warm gray background */
-  padding: 30px 24px;
-  border-radius: 12px;
-  font-size: 1.1rem;
-  color: #333333;
-  box-shadow: 0 4px 18px rgba(111, 175, 114, 0.1);
-  text-align: left;
-  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  color: #444;
 }
 
 @media (max-width: 960px) {
