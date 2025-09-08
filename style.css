@@ -61,6 +61,89 @@ nav ul li a:focus {
   color: #fff;
   background: #d32f2f;
 }
+/* Hamburger styles */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 14px;
+  z-index: 20;
+}
+.hamburger,
+.hamburger:before,
+.hamburger:after {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: #d32f2f;
+  border-radius: 2px;
+  position: relative;
+  transition: all 0.25s;
+}
+.hamburger:before,
+.hamburger:after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+.hamburger:before { top: -9px; }
+.hamburger:after  { top: 9px; }
+
+/* Responsive menu */
+@media (max-width: 800px) {
+  .main-nav {
+    position: absolute;
+    top: 75px;
+    right: 0;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(211,47,47,0.09);
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    display: none;
+    z-index: 15;
+    animation: navfade .2s;
+  }
+  .main-nav.open {
+    display: block;
+  }
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+  }
+  .main-nav ul li a {
+    padding: 18px 24px;
+    font-size: 1.18em;
+    border-radius: 0;
+    border-bottom: 1px solid #f7bbbb;
+    color: #d32f2f;
+    text-align: left;
+  }
+  .main-nav ul li:last-child a {
+    border-bottom: none;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .header-flex {
+    position: relative;
+    z-index: 20;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+}
+
+/* Optional: Animate menu in */
+@keyframes navfade {
+  from { opacity: 0; transform: translateY(-10px);}
+  to { opacity: 1; transform: translateY(0);}
+}
 
 /* HERO SECTION */
 .hero {
@@ -333,7 +416,6 @@ nav ul li a:focus {
 .innovation-item:focus-within .pic {
   transform: scale(1.18);
 }
-/* ...other styles below (contact, footer, responsive) ... */
 
 @media (max-width: 700px) {
   .picframe {
