@@ -675,3 +675,68 @@ footer {
     max-width: 98vw;
   }
 }
+@media (max-width: 700px) {
+  .container {
+    padding: 0 4vw;
+  }
+  section, .card-section, .about-section, .innovation-section, .gallery-section, .contact-section {
+    padding: 16px 0 !important;
+    margin: 10px 0 !important;
+    border-radius: 10px;
+  }
+  h1, h2, h3 {
+    font-size: 1.15em !important;
+    margin-bottom: 10px !important;
+  }
+  .card, .innovation-item {
+    padding: 14px 4vw !important;
+    margin: 8px 0 !important;
+    max-width: 98vw !important;
+    min-width: 0 !important;
+  }
+}
+@media (max-width: 700px) {
+  .card .icon, .innovation-item .icon, .partner-logo-img {
+    width: 90vw !important;
+    max-width: 160px !important;
+    height: auto !important;
+    max-height: 90px !important;
+  }
+  .gallery-grid img, .picframe {
+    width: 100vw !important;
+    max-width: 97vw !important;
+    height: auto !important;
+    max-height: 100px !important;
+  }
+}
+@media (max-width: 700px) {
+  body { font-size: 1.02em; }
+  .btn-primary { font-size: 1em; padding: 13px 18px; }
+}
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: box-shadow 0.2s;
+}
+.card-section, .innovation-section, .about-section, .contact-section {
+  background: #fff;
+}
+.gallery-section, .partner-logo-section {
+  background: #fafcfd;
+}
+@media (max-width: 700px) {
+  .card-list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+  .card {
+    margin: 0;
+    border-radius: 10px;
+    font-size: 1em;
+  }
+  .card h3 { font-size: 1.09em; }
+  .card p { font-size: 0.97em; }
+}
+  
