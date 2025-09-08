@@ -117,6 +117,15 @@ nav ul li a:focus {
   display: flex;
 }
 
+@media (max-width: 800px) {
+  .main-nav {
+    pointer-events: none;
+  }
+  .main-nav.open {
+    pointer-events: auto;
+  }
+}
+
 /* HERO SECTION */
 .hero {
   background: linear-gradient(120deg, #fdeaea 0%, #f7bbbb 100%);
