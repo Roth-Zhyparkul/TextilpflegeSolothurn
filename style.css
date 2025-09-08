@@ -61,88 +61,15 @@ nav ul li a:focus {
   color: #fff;
   background: #d32f2f;
 }
-/* Hamburger styles */
 .menu-toggle {
   display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  margin-left: 14px;
-  z-index: 20;
+  /* ...other styling... */
 }
-.hamburger,
-.hamburger:before,
-.hamburger:after {
-  display: block;
-  width: 28px;
-  height: 3px;
-  background: #d32f2f;
-  border-radius: 2px;
-  position: relative;
-  transition: all 0.25s;
-}
-.hamburger:before,
-.hamburger:after {
-  content: '';
-  position: absolute;
-  left: 0;
-}
-.hamburger:before { top: -9px; }
-.hamburger:after  { top: 9px; }
 
-/* Responsive menu */
 @media (max-width: 800px) {
-  .main-nav {
-    position: absolute;
-    top: 75px;
-    right: 0;
-    left: 0;
-    background: #fff;
-    box-shadow: 0 6px 18px rgba(211,47,47,0.09);
-    border-bottom-left-radius: 16px;
-    border-bottom-right-radius: 16px;
-    display: none;
-    z-index: 15;
-    animation: navfade .2s;
-  }
-  .main-nav.open {
-    display: block;
-  }
-  .main-nav ul {
-    flex-direction: column;
-    gap: 0;
-    padding: 0;
-    margin: 0;
-  }
-  .main-nav ul li a {
-    padding: 18px 24px;
-    font-size: 1.18em;
-    border-radius: 0;
-    border-bottom: 1px solid #f7bbbb;
-    color: #d32f2f;
-    text-align: left;
-  }
-  .main-nav ul li:last-child a {
-    border-bottom: none;
-  }
   .menu-toggle {
     display: block;
   }
-  .header-flex {
-    position: relative;
-    z-index: 20;
-  }
-  nav ul {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-  }
-}
-
-/* Optional: Animate menu in */
-@keyframes navfade {
-  from { opacity: 0; transform: translateY(-10px);}
-  to { opacity: 1; transform: translateY(0);}
 }
 
 /* HERO SECTION */
@@ -675,68 +602,3 @@ footer {
     max-width: 98vw;
   }
 }
-@media (max-width: 700px) {
-  .container {
-    padding: 0 4vw;
-  }
-  section, .card-section, .about-section, .innovation-section, .gallery-section, .contact-section {
-    padding: 16px 0 !important;
-    margin: 10px 0 !important;
-    border-radius: 10px;
-  }
-  h1, h2, h3 {
-    font-size: 1.15em !important;
-    margin-bottom: 10px !important;
-  }
-  .card, .innovation-item {
-    padding: 14px 4vw !important;
-    margin: 8px 0 !important;
-    max-width: 98vw !important;
-    min-width: 0 !important;
-  }
-}
-@media (max-width: 700px) {
-  .card .icon, .innovation-item .icon, .partner-logo-img {
-    width: 90vw !important;
-    max-width: 160px !important;
-    height: auto !important;
-    max-height: 90px !important;
-  }
-  .gallery-grid img, .picframe {
-    width: 100vw !important;
-    max-width: 97vw !important;
-    height: auto !important;
-    max-height: 100px !important;
-  }
-}
-@media (max-width: 700px) {
-  body { font-size: 1.02em; }
-  .btn-primary { font-size: 1em; padding: 13px 18px; }
-}
-.main-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  transition: box-shadow 0.2s;
-}
-.card-section, .innovation-section, .about-section, .contact-section {
-  background: #fff;
-}
-.gallery-section, .partner-logo-section {
-  background: #fafcfd;
-}
-@media (max-width: 700px) {
-  .card-list {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 14px;
-  }
-  .card {
-    margin: 0;
-    border-radius: 10px;
-    font-size: 1em;
-  }
-  .card h3 { font-size: 1.09em; }
-  .card p { font-size: 0.97em; }
-}
-  
