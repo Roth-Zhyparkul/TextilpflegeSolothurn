@@ -227,6 +227,14 @@ nav ul li a:focus {
   font-weight: bold;
 }
 
+/* Opening hours section - override bullet points */
+#oeffnungszeiten ul li {
+  padding-left: 0;
+}
+#oeffnungszeiten ul li::before {
+  display: none;
+}
+
 /* GALLERY SECTION */
 .gallery-section {
   background: #fff;
