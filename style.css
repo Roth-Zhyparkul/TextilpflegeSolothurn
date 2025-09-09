@@ -602,3 +602,105 @@ footer {
     max-width: 98vw;
   }
 }
+/* Hide nav by default on mobile */
+@media (max-width: 800px) {
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(211,47,47,0.11);
+    padding: 20px 0 10px 0;
+    border-radius: 0 0 16px 16px;
+    z-index: 99;
+    animation: fadeInNav .25s;
+  }
+  .main-nav.open {
+    display: block;
+  }
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+  .main-nav ul li {
+    margin-bottom: 12px;
+  }
+  .main-nav ul li:last-child {
+    margin-bottom: 0;
+  }
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 10px;
+    z-index: 100;
+  }
+  .hamburger {
+    display: block;
+    width: 32px;
+    height: 4px;
+    background: #d32f2f;
+    border-radius: 2px;
+    position: relative;
+  }
+  .hamburger::before,
+  .hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 32px;
+    height: 4px;
+    background: #d32f2f;
+    border-radius: 2px;
+    transition: 0.2s;
+  }
+  .hamburger::before {
+    top: -10px;
+  }
+  .hamburger::after {
+    top: 10px;
+  }
+}
+@keyframes fadeInNav {
+  from { opacity: 0; transform: translateY(-15px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+@media (max-width: 800px) {
+  .header-flex {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* Ensure header items are spaced */
+  }
+  .logo {
+    order: 1;
+  }
+  .menu-toggle {
+    order: 2;
+    margin-left: auto; /* Push to the right */
+    margin-right: 0;
+    /* You can also add some right padding if you want */
+  }
+}
+@media (max-width: 800px) {
+  .main-header {
+    min-height: 60px; /* or whatever height fits your logo/hamburger */
+  }
+  .header-flex {
+    min-height: 60px;
+    height: 60px;
+    align-items: center;
+  }
+}
+.main-header {
+  z-index: 100;
+}
+
+.menu-toggle {
+  z-index: 110;
+  position: relative; /* so z-index applies */
+}
