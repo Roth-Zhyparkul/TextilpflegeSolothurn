@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="Professionelle Textilreinigung, Wäscherei und Bügelservice in Solothurn. Schonend, schnell und zuverlässig – Ihr lokaler Partner für gepflegte Textilien." />
   <link rel="stylesheet" href="style.css" />
-  <!-- Favicon (now jpg) -->
   <link rel="icon" href="img/logo.jpg" type="image/jpeg" />
   <meta name="theme-color" content="#FFFFFF" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,7 +26,7 @@
     "name":"Textilpflege Solothurn",
     "image":[
       "https://www.textilpflegesolothurn.ch/img/logo.jpg",
-      "https://www.textilpflegesolothurn.ch/img/1.jpg"
+      "https://www.textilpflegesolothurn.ch/img/hero.jpg"
     ],
     "@id":"https://www.textilpflegesolothurn.ch/#firma",
     "url":"https://www.textilpflegesolothurn.ch/",
@@ -55,7 +54,6 @@
   <header class="site-header" id="top">
     <div class="container flex between align-center">
       <a href="#" class="brand" aria-label="Startseite">
-        <!-- Intrinsic width/height help CLS; they reflect original image ratio. Adjust if needed -->
         <img src="img/logo.jpg" width="500" height="500" alt="Logo Textilpflege Solothurn" />
       </a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="haupt-navigation">
@@ -66,7 +64,7 @@
         <ul>
           <li><a href="#leistungen">Leistungen</a></li>
           <li><a href="#ablauf">Ablauf</a></li>
-          <li><a href="#oeffnungszeiten">Öffnungszeiten</a></li>
+            <li><a href="#oeffnungszeiten">Öffnungszeiten</a></li>
           <li><a href="#einblicke">Einblicke</a></li>
           <li><a class="btn btn--small" href="#kontakt">Kontakt</a></li>
         </ul>
@@ -86,7 +84,7 @@
       </div>
       <div class="hero__image">
         <picture>
-          <img src="img/8.jpg" alt="Professionelle Wäschereitechnik" loading="lazy" />
+          <img src="img/hero.jpg" alt="Professionelle Wäschereitechnik" loading="lazy" />
         </picture>
       </div>
     </div>
@@ -137,7 +135,7 @@
       <div class="container">
         <header class="section__header">
           <h2 id="ablauf-title">Ablauf</h2>
-          <p>Ein klarer Prozess für gleichbleibende Qualität.</p>
+          <p>Transparent & einfach – in vier Schritten zu sauberen Textilien.</p>
         </header>
         <ol class="prozess">
           <li><h3>Annahme</h3><p>Persönliche Prüfung & Beratung Ihrer Textilien.</p></li>
@@ -171,7 +169,7 @@
             <span class="status__text">Lade Status…</span>
           </div>
         </div>
-        <p class="small muted">Feiertage bitte telefonisch erfragen: <strong>+41 32 000 00 00</strong></p>
+        <p class="small muted">An gesetzlichen Feiertagen geschlossen.</p>
       </div>
     </section>
 
@@ -199,45 +197,31 @@
         <h2 id="cta-title">Fragen zu einem Textil?</h2>
         <p>Kontaktieren Sie uns – wir beraten Sie gerne unverbindlich.</p>
         <div class="cta__actions">
-          <a class="btn btn--primary" href="#kontakt">Kontaktformular</a>
+          <a class="btn btn--primary" href="#kontakt">Kontakt</a>
           <a class="btn btn--outline" href="tel:+41320000000">Anruf</a>
         </div>
       </div>
     </section>
 
     <section id="kontakt" class="section section--alt" aria-labelledby="kontakt-title">
-      <div class="container grid contact-grid">
-        <div>
+      <div class="container kontakt-simple">
+        <div class="kontakt-info">
           <header class="section__header">
             <h2 id="kontakt-title">Kontakt</h2>
-            <p>Wir melden uns schnellstmöglich zurück.</p>
+            <p>Rufen Sie uns an oder senden Sie uns eine E-Mail.</p>
           </header>
           <ul class="contact-list">
             <li><strong>Adresse:</strong> Musterstrasse 10, 4500 Solothurn</li>
             <li><strong>Telefon:</strong> <a href="tel:+41320000000">+41 32 000 00 00</a></li>
-            <li><strong>E-Mail:</strong> <a href="mailto:info@textilpflegesolothurn.ch">info@textilpflegesolothurn.ch</a></li>
-          </ul>
-          <form class="contact-form" aria-label="Kontaktformular" method="post" action="https://formspree.io/f/your-id">
-            <div class="form-group">
-              <label for="cf-name">Name *</label>
-              <input id="cf-name" name="name" required autocomplete="name" />
-            </div>
-            <div class="form-group">
-              <label for="cf-email">E-Mail *</label>
-              <input id="cf-email" type="email" name="email" required autocomplete="email" />
-            </div>
-            <div class="form-group">
-              <label for="cf-msg">Nachricht *</label>
-              <textarea id="cf-msg" name="message" rows="5" required></textarea>
-            </div>
-            <button class="btn btn--primary" type="submit">Senden</button>
-            <p class="form-hint small">* Pflichtfelder. Daten nur zur Bearbeitung der Anfrage.</p>
-          </form>
-        </div>
-        <div class="map-wrapper">
-          <iframe title="Karte von Textilpflege Solothurn" loading="lazy"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2764.0000000000005!2d7.536!3d47.208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478ed4c2%3A0x000000000000000!2sSolothurn!5e0!3m2!1sde!2sch!4v000000000"
-                  width="100%" height="380" style="border:0;" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            <li>
+              <strong>E-Mail:</strong>
+              <a href="mailto:info@textilpflegesolothurn.ch?subject=Anfrage%20Textilpflege&body=Guten%20Tag%2C%0A%0AIch%20habe%20eine%20Frage%20zu%20folgenden%20Textilien%3A%0A-%20%0A-%20%0A%0ABitte%20um%20R%C3%BCckmeldung.%0A%0ABesten%20Dank%2C%0A">
+                info@textilpflegesolothurn.ch
+              </a>
+            </a>
+            </li>
+        </ul>
+          <p class="small muted">Für spezifische Textilfragen bitte kurz anrufen – wir beraten direkt.</p>
         </div>
       </div>
     </section>

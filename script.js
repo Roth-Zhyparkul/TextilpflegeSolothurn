@@ -1,5 +1,3 @@
-/* Navigation, back-to-top, dynamic year, opening hours & lazy-load polyfill
-   (Optional header shrink: uncomment code where noted) */
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.site-header');
 
@@ -37,14 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
   );
   toggleBackToTop();
 
-  // Optional shrink effect (uncomment if desired)
-  /*
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 80) header?.classList.add('shrink');
-    else header?.classList.remove('shrink');
-  });
-  */
-
   // Dynamic year
   const yearSpan = document.getElementById('year');
   if (yearSpan) yearSpan.textContent = new Date().getFullYear();
@@ -55,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!table) return;
     const statusEl = document.querySelector('[data-open-status]');
     const now = new Date();
-    const day = now.getDay(); // 0 Sunday
+    const day = now.getDay();
     const minutes = now.getHours() * 60 + now.getMinutes();
 
     const schedule = {
