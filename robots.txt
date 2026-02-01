@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.textilpflegesolothurn.ch/sitemap.xml

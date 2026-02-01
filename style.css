@@ -310,14 +310,23 @@ a:hover,a:focus-visible{text-decoration:underline;}
   color:var(--btn-color);line-height:1.2;font-size:.88rem;transition:var(--transition);
 }
 .btn:hover,.btn:focus-visible{
-  background:var(--btn-bg-hover);color:#fff;text-decoration:none;
+  background:var(--btn-bg-hover);color:var(--btn-color);text-decoration:none;
 }
 .btn--outline{
   --btn-bg:#ffffff;--btn-bg-hover:#f0f2f3;--btn-color:var(--color-text);
   border:1px solid var(--color-border);
 }
+.btn--outline:hover,.btn--outline:focus-visible{
+  border-color:#cdd0d4;
+}
 .btn--small{padding:.5rem .75rem;font-size:.75rem;}
 .btn:active{transform:translateY(1px);}
+
+/* Prevent sticky hover on touch devices */
+@media (hover:none){
+  .btn:hover{background:var(--btn-bg);color:var(--btn-color);}
+  .btn--outline:hover{border-color:var(--color-border);}
+}
 
 /* 13. Footer */
 .site-footer{
