@@ -748,7 +748,6 @@ a:hover,a:focus-visible{text-decoration:underline;}
 .stellen-page-intro p{
   color:var(--color-text-light);
   font-size:.95rem;
-  max-width:60ch;
 }
 
 @media (max-width:720px){
