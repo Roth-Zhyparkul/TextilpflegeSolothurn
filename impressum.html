@@ -16,11 +16,16 @@
       <a href="index.html" class="brand" aria-label="Startseite">
         <img src="img/logo.jpg" alt="Logo">
       </a>
-      <nav class="main-nav" aria-label="Hauptnavigation">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="haupt-navigation">
+        <span class="nav-toggle__bar"></span>
+        <span class="sr-only">Menü öffnen</span>
+      </button>
+      <nav id="haupt-navigation" class="main-nav" aria-label="Hauptnavigation">
         <ul>
           <li><a href="index.html#leistungen">Leistungen</a></li>
           <li><a href="index.html#oeffnungszeiten">Öffnungszeiten</a></li>
           <li><a href="index.html#einblicke">Einblicke</a></li>
+          <li><a href="jobs.html">Offene Stellen</a></li>
           <li><a href="index.html#kontakt">Kontakt</a></li>
           <li><a href="impressum.html" aria-current="page">Impressum</a></li>
           <li><a href="datenschutz.html">Datenschutz</a></li>
@@ -35,7 +40,7 @@
       <div>
         <h2>Unternehmen</h2>
         <p>
-          <strong>Textilpflege Solothurn</strong><br>
+          <strong>Textilpflege Solothurn GmbH</strong><br>
           Bielstrasse 158<br>
           4500 Solothurn<br>
           Schweiz
@@ -43,13 +48,13 @@
         <p>
           Telefon: <a href="tel:+41326230402">+41 32 623 04 02</a><br>
           E-Mail: <a href="mailto:info@textilpflegesolothurn.ch">info@textilpflegesolothurn.ch</a><br>
-          Website: <a href="https://roth-zhyparkul.github.io/TextilpflegeSolothurn/">www.textilpflegesolothurn.ch</a>
+          Website: <a href="https://www.textilpflegesolothurn.ch">www.textilpflegesolothurn.ch</a>
         </p>
       </div>
       <div>
         <h2>Rechtsangaben</h2>
         <p>
-          Rechtsform: Einzelunternehmen<br>
+          Rechtsform: GmbH<br>
           Handelsregister: Kanton Solothurn<br>
           UID: CHE-405.020.928<br>
           MWST-Nr.: CHE-405.020.928 MWST
@@ -70,7 +75,7 @@
 
     <section class="legal-section" id="urheberrecht">
       <h2>Urheberrecht</h2>
-      <p>Alle nicht ausdrücklich anders gekennzeichneten Texte, Bilder und Gestaltungselemente unterliegen dem Urheberrecht der Textilpflege Solothurn. Nutzung ausserhalb gesetzlicher Schranken nur mit vorheriger Zustimmung.</p>
+      <p>Alle nicht ausdrücklich anders gekennzeichneten Texte, Bilder und Gestaltungselemente unterliegen dem Urheberrecht der Textilpflege Solothurn GmbH. Nutzung ausserhalb gesetzlicher Schranken nur mit vorheriger Zustimmung.</p>
     </section>
 
     <section class="legal-section" id="datenschutz">
@@ -96,6 +101,7 @@
           <li><a href="index.html#leistungen">Leistungen</a></li>
           <li><a href="index.html#oeffnungszeiten">Öffnungszeiten</a></li>
           <li><a href="index.html#einblicke">Einblicke</a></li>
+          <li><a href="jobs.html">Offene Stellen</a></li>
           <li><a href="index.html#kontakt">Kontakt</a></li>
           <li><a href="impressum.html" aria-current="page">Impressum</a></li>
           <li><a href="datenschutz.html">Datenschutz</a></li>
@@ -108,6 +114,7 @@
     <button class="back-to-top" data-back-to-top aria-label="Nach oben">↑</button>
   </footer>
 
+  <script src="script.js" defer></script>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

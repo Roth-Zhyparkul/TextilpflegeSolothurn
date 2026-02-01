@@ -8,9 +8,6 @@
    - Centering + width constraints for legal content
    ========================================================================== */
 
-/* 0. Webfont (loaded once for every page) */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
-
 /* 1. CSS Custom Properties */
 :root {
   --color-brand:#E60000;
@@ -647,7 +644,7 @@ a:hover,a:focus-visible{text-decoration:underline;}
   pointer-events:none;
 }
 
-/* Ensure non-active links don’t inherit underline remnants */
+/* Ensure non-active links don't inherit underline remnants */
 .site-header .main-nav a:not([aria-current="page"])::after{content:none;}
 
 /* Match vertical rhythm across all links (except Kontakt button style) */
@@ -661,4 +658,86 @@ a:hover,a:focus-visible{text-decoration:underline;}
 .site-header .main-nav a[href*="index.html#kontakt"]{
   padding:.48rem .75rem;
   line-height:1;
+}
+
+/* ==========================================================================
+   OFFENE STELLEN – Section + Cards
+   ========================================================================== */
+
+/* Section preview on index.html */
+.stellen-grid{
+  display:grid;
+  gap:1.4rem;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  margin-bottom:1.6rem;
+}
+.stellen-card{
+  background:#fff;
+  border:1px solid var(--color-border);
+  border-radius:var(--radius-m);
+  padding:1.25rem 1.15rem 1.1rem;
+  box-shadow:var(--shadow-sm);
+  display:flex;
+  flex-direction:column;
+  transition:box-shadow var(--transition), transform var(--transition);
+}
+.stellen-card:hover{
+  box-shadow:var(--shadow);
+  transform:translateY(-3px);
+}
+.stellen-card h3{
+  font-size:1.05rem;
+  margin:0 0 .4rem;
+  font-weight:600;
+}
+.stellen-card p{
+  font-size:.9rem;
+  color:var(--color-text-light);
+  margin:0 0 .7rem;
+  flex:1;
+}
+.stellen-card .stellen-meta{
+  font-size:.8rem;
+  color:var(--color-text-light);
+  margin-bottom:.8rem;
+  display:flex;
+  gap:.8rem;
+  flex-wrap:wrap;
+}
+.stellen-card .stellen-meta span{
+  background:var(--color-bg-alt);
+  padding:.2rem .55rem;
+  border-radius:var(--radius-s);
+  font-weight:500;
+}
+.stellen-card .btn{
+  align-self:flex-start;
+  margin-top:auto;
+}
+
+/* Full jobs page – wider grid */
+.stellen-page-grid{
+  display:grid;
+  gap:1.6rem;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  max-width:var(--max-width);
+  margin:0 auto 2rem;
+  padding:0 clamp(.9rem,2vw,1.25rem);
+}
+
+/* Jobs page intro */
+.stellen-page-intro{
+  max-width:var(--max-width);
+  margin:0 auto 2rem;
+  padding:0 clamp(.9rem,2vw,1.25rem);
+}
+.stellen-page-intro p{
+  color:var(--color-text-light);
+  font-size:.95rem;
+  max-width:60ch;
+}
+
+@media (max-width:720px){
+  .stellen-grid,
+  .stellen-page-grid{grid-template-columns:1fr;}
 }
