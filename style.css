@@ -507,15 +507,15 @@ a:hover,a:focus-visible{text-decoration:underline;}
 }
 
 /* Link treatment: no background animations; simple subtle underline on hover */
-.legal-page-wrapper a,
-.legal-section a{
+.legal-page-wrapper a:not(.btn),
+.legal-section a:not(.btn){
   color:var(--color-brand);
   text-decoration:none;
   border-bottom:1px solid transparent;
   transition:color var(--transition), border-color var(--transition);
 }
-.legal-page-wrapper a:hover,
-.legal-section a:hover{
+.legal-page-wrapper a:not(.btn):hover,
+.legal-section a:not(.btn):hover{
   border-color:var(--color-brand);
   text-decoration:none;
   color:var(--color-brand-dark);
